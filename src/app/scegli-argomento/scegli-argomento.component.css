@@ -1,0 +1,18 @@
+h2{
+    font-size: var(--fs-domanda);
+    color: var(--clr-sfumato);
+}
+
+.materie{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    width: 80%;
+    margin: 1em auto;
+
+}
+
+.materie--large{
+    width: 35%;
+}

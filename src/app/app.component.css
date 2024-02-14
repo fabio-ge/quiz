@@ -1,0 +1,14 @@
+header{
+    width: 100%;
+    background-color: var(--clr-sfondo);
+    font-size: var(--fs-titolo);
+    color: var(--clr-testo);
+    text-align: center;
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}

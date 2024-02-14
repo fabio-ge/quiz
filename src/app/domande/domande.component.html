@@ -1,0 +1,14 @@
+<h3 *ngIf="domandeFatte > 0">Punteggio: {{ punteggio }}/{{ domandeFatte }}</h3>
+<div class="domanda domanda--riquadro">
+    <h3>{{ domandaCorrente.testo }}</h3>
+</div>
+<div class="domanda__risposte">
+    <ul>
+        <li 
+            [ngClass]="{'domanda--riquadro': true, 
+                        'giusta': isClass(risposta,'giusta',i),
+                        'sbagliata': isClass(risposta,'sbagliata',i)}" 
+            *ngFor="let risposta of risposteMescolate; index as i"
+            (click)="checkRisposta(risposta,i)">{{ risposta.testo }}</li>
+    </ul>
+</div>

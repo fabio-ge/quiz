@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --clr-testo: #8CB9BD;
+    --clr-sfondo: #B67352;
+    --clr-sfumato: #ECB159;
+    --fs-titolo: 48px;
+    --fs-domanda: 32px;
+    --fs-testo: 24px;
+}
+
+@font-face {
+    font-family: 'boldenvan';
+    src: url('/assets/Boldenvan.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/Roboto-Black.ttf');
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,body{
+    height: 100vh;
+    line-height: 1.6;
+}
+
+body{
+    font-family: boldenvan;
+}
+
+img{
+    max-width: 100%;
+}
+
+button,input{
+    font: inherit;
+}
