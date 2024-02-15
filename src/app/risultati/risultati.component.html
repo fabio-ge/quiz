@@ -1,4 +1,5 @@
 <div class="risultati">
+    <h2 class="risultati__punteggio">Risultato finale: {{ punteggio }}/{{ numeroDomande }}</h2>
     <div class="risultati__risposta" *ngFor="let risultato of risultati">
         <h3>Domanda n. {{ risultato.id_domanda }}</h3>
         <p> {{ risultato.domanda }} </p>

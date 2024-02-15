@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { DomandeSuArgomento, Materia, Domanda, Risultato } from './type';
+import { DomandeSuArgomento, Materia, Domanda, Risultato } from '../type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
+  NUMERO_DOMANDE = 10;
   risultati: Risultato[] = [];
 
   materie: Materia[] = [
@@ -242,5 +243,13 @@ export class QuizService {
 
   getRiepilogo(): Risultato[] {
     return this.risultati;
+  }
+
+  getPunteggioFinale(): number {
+    if(this.risultati.length){
+      return this.risultati.filter(ris => ris.risposte.length === 1).length;
+    }
+
+    return 0;
   }
 }

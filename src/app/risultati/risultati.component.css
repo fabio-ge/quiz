@@ -3,6 +3,11 @@
     margin: 2em 0;
 }
 
+.risultati__punteggio {
+    font-size: 36px;
+    color: #B67352;
+}
+
 .risultati__risposta {
     background-color: antiquewhite;
     color: var(--clr-sfumato);

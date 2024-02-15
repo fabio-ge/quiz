@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../services/quiz.service';
 import { Risultato } from '../type';
 import { Router } from '@angular/router';
 
@@ -10,12 +10,15 @@ import { Router } from '@angular/router';
 })
 export class RisultatiComponent implements OnInit{
   risultati!: Risultato[];
+  punteggio!: number;
+  numeroDomande = this.quizService.NUMERO_DOMANDE;
 
   constructor(private quizService: QuizService,
               private router: Router){}
 
   ngOnInit(): void {
       this.risultati = this.quizService.getRiepilogo();
+      this.punteggio = this.quizService.getPunteggioFinale();
   }
 
   nuovaPartita(){

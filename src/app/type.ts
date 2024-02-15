@@ -1,5 +1,3 @@
-import { NumberSymbol } from "@angular/common";
-
 export interface Materia {
     id: number;
     titolo: string;

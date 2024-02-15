@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../services/quiz.service';
+import { SoundService } from '../services/sound.service';
 import { Domanda, Risposta } from '../type';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,20 +12,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DomandeComponent implements OnInit{
   domandeScelte: Domanda[] = [];
   id!: string | null;
-  NUMERO_DOMANDE = 10;
   domandaCorrente!: Domanda;
   risposteMescolate!: Risposta[];
-  punteggio = 0;
   domandeFatte = 0;
   indiceCliccato = -1;
 
   constructor(private quizService: QuizService,
               private route: ActivatedRoute,
-              private router: Router){}
+              private router: Router,
+              private soundService: SoundService){}
   
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get("id");  
-    this.domandeScelte = this.quizService.getSampleDomande(Number(this.id),this.NUMERO_DOMANDE);
+    this.domandeScelte = this.quizService.getSampleDomande(Number(this.id),this.quizService.NUMERO_DOMANDE);
     this.setNewQuestion();
   }
 
@@ -44,11 +44,13 @@ export class DomandeComponent implements OnInit{
     if(this.indiceCliccato != -1) return;
     this.domandeFatte += 1;
     this.indiceCliccato = index;
-    if(risposta.giusta) this.punteggio += 1;  
+    if(risposta.giusta) this.soundService.playAudio('giusto');
+    else this.soundService.playAudio('sbagliato');
+    
     this.saveRisposta(risposta);
     
     setTimeout(() => {
-      if(this.domandeFatte === this.NUMERO_DOMANDE){
+      if(this.domandeFatte === this.quizService.NUMERO_DOMANDE){
         this.router.navigateByUrl("risultati");
         return;
       }
@@ -69,6 +71,7 @@ export class DomandeComponent implements OnInit{
     this.domandaCorrente = this.getRandomQuestion();
     this.risposteMescolate = this.getAnswersShuffled();
     this.indiceCliccato = -1;
+    this.soundService.playAudio('loop');
   }
 
   saveRisposta(risposta: Risposta){
