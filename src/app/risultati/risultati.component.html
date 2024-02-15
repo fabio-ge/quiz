@@ -1,1 +1,14 @@
-<p>risultati works!</p>
+<div class="risultati">
+    <div class="risultati__risposta" *ngFor="let risultato of risultati">
+        <h3>Domanda n. {{ risultato.id_domanda }}</h3>
+        <p> {{ risultato.domanda }} </p>
+        <ul>
+            <li [ngClass]="{'giusta': risposta.giusta}"
+                *ngFor="let risposta of risultato.risposte">
+                {{ risposta.testo }}
+            </li>
+        </ul>
+    </div>
+    <button class="risultati__bottone" (click)="nuovaPartita()">Nuova partita</button>
+    Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=61070">Pixabay</a>
+</div>

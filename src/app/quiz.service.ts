@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { DomandeSuArgomento, Materia, Domanda } from './type';
+import { DomandeSuArgomento, Materia, Domanda, Risultato } from './type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
+  risultati: Risultato[] = [];
+
   materie: Materia[] = [
              {id: 1,titolo: "STORIA",icona: "/assets/history.png"},
              {id: 2,titolo: "GEOGRAFIA",icona: "/assets/geo.png"},
@@ -120,7 +122,7 @@ export class QuizService {
           risposte: [
             {testo: "Luca", giusta: false},
             {testo: "Anna", giusta: false},
-            {testo: "Pareggio", giusta: false},
+            {testo: "Pareggio", giusta: true},
             {testo: "Non si può dire", giusta: false}
           ]
         },
@@ -231,7 +233,14 @@ export class QuizService {
 
     return domandeResp;
 
+  }
 
+  saveResponse(risultato: Risultato){
+    /*Salva l' esito di una risposta in modo da costruire il resoconto finale*/
+    this.risultati.push(risultato);
+  }
 
+  getRiepilogo(): Risultato[] {
+    return this.risultati;
   }
 }

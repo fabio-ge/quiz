@@ -1,0 +1,37 @@
+.risultati {
+    font-family: Roboto;
+    margin: 2em 0;
+}
+
+.risultati__risposta {
+    background-color: antiquewhite;
+    color: var(--clr-sfumato);
+    font-style: italic;
+    font-size: var(--fs-testo);
+    border: 3px solid firebrick;
+    padding: 0.3em;
+    box-shadow: 1px 1px 1px lightgrey;
+    border-radius: 20px;
+    margin: 1em auto;
+    width: 50%;
+}
+
+.risultati__risposta ul {
+    list-style: none;
+}
+
+.risultati__risposta ul li {
+    background-color: red;
+}
+
+.giusta {
+    background-color: green !important;
+}
+
+.risultati__bottone {
+    background-color: var(--clr-sfondo);
+    color: var(--clr-testo);
+    padding: 0.5em 2em;
+    cursor: pointer;
+    border-radius: 10px;
+}

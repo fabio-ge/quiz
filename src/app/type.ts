@@ -20,3 +20,9 @@ export interface DomandeSuArgomento {
     id: number;
     domande: Domanda[];
 }
+
+export interface Risultato {
+    id_domanda: number;
+    domanda: string;
+    risposte: Risposta[];
+}

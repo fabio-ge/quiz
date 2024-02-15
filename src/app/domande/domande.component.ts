@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DomandeComponent implements OnInit{
   domandeScelte: Domanda[] = [];
   id!: string | null;
-  NUMERO_DOMANDE = 3;
+  NUMERO_DOMANDE = 10;
   domandaCorrente!: Domanda;
   risposteMescolate!: Risposta[];
   punteggio = 0;
@@ -25,8 +25,7 @@ export class DomandeComponent implements OnInit{
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get("id");  
     this.domandeScelte = this.quizService.getSampleDomande(Number(this.id),this.NUMERO_DOMANDE);
-    this.domandaCorrente = this.getRandomQuestion();
-    this.risposteMescolate = this.getAnswersShuffled();
+    this.setNewQuestion();
   }
 
   getRandomQuestion(): Domanda{
@@ -41,20 +40,20 @@ export class DomandeComponent implements OnInit{
   }
 
   checkRisposta(risposta: Risposta,index: number): void {
+    //Impedisco ulteriori click dopo aver già dato la risposta alla domanda corrente
+    if(this.indiceCliccato != -1) return;
     this.domandeFatte += 1;
     this.indiceCliccato = index;
-
-    if(risposta.giusta) this.punteggio += 1;
+    if(risposta.giusta) this.punteggio += 1;  
+    this.saveRisposta(risposta);
     
     setTimeout(() => {
       if(this.domandeFatte === this.NUMERO_DOMANDE){
         this.router.navigateByUrl("risultati");
         return;
       }
-
-      this.domandaCorrente = this.getRandomQuestion();
-      this.risposteMescolate = this.getAnswersShuffled();
-      this.indiceCliccato = -1;
+      this.setNewQuestion();
+      
     },4000);
   }
 
@@ -64,6 +63,28 @@ export class DomandeComponent implements OnInit{
       if(!risposta.giusta && className==='sbagliata' && this.indiceCliccato === index) return true;
     }
     return false;
+  }
+
+  setNewQuestion() {
+    this.domandaCorrente = this.getRandomQuestion();
+    this.risposteMescolate = this.getAnswersShuffled();
+    this.indiceCliccato = -1;
+  }
+
+  saveRisposta(risposta: Risposta){
+    let risposteRiepilogo: Risposta[] = [];
+
+    risposteRiepilogo.push({...risposta});
+    if(!risposta.giusta) {
+      let rispostaGiusta = this.domandaCorrente.risposte.find(risp => risp.giusta);
+      if(rispostaGiusta) risposteRiepilogo.push({...rispostaGiusta});
+    }
+
+    this.quizService.saveResponse({
+      id_domanda: this.domandeFatte,
+      domanda: this.domandaCorrente.testo,
+      risposte: risposteRiepilogo
+    });
   }
 
 }
