@@ -9,3 +9,9 @@
     border-radius: 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .scelta {
+        font-size: var(--mb-fstesto);
+    }
+}

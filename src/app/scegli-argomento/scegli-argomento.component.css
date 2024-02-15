@@ -16,3 +16,9 @@ h2{
 .materie--large{
     width: 35%;
 }
+
+@media screen and (max-width: 600px) {
+    .materie--large {
+        width: 50%;
+    } 
+}

@@ -5,6 +5,8 @@
     --fs-titolo: 48px;
     --fs-domanda: 32px;
     --fs-testo: 24px;
+    --mb-fstitolo: 24px;
+    --mb-fstesto: 16px;
 }
 
 @font-face {

@@ -40,3 +40,15 @@
     cursor: pointer;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 600px){
+    .risultati__punteggio {
+        font-size: var(--mb-fstitolo);
+    }
+
+    .risultati__risposta {
+        font-size: var(--mb-fstesto);
+        width: 90%;
+        border-radius: 8px;
+    }
+}

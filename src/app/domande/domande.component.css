@@ -37,3 +37,22 @@ h3 {
 .sbagliata {
     background-color: red !important;
 }
+
+@media screen and (max-width: 600px) {
+    h3 {
+        font-size: var(--mb-fstesto);
+    }
+
+    .domanda,.domanda__risposte ul li {
+        font-size: var(--mb-fstesto);
+    }
+    
+    .domanda--riquadro {
+        border-radius: 6px;
+        padding: 1em 0.6em;
+    }
+
+    .domanda__risposte {
+        width: 90%;
+    }
+}
