@@ -1,0 +1,311 @@
+{
+    "id": 1, 
+      "domande": [
+        { 
+          "testo": "La storia ricostruisce ...", 
+          "risposte": [
+            {"testo": "fatti avvenuti realmente nel passato","giusta": true},
+            {"testo": "fatti di fantasia", "giusta": false},
+            {"testo": "invenzioni dello storico", "giusta": false},
+            {"testo": "fatti avvenuti nel futuro", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Storia vuol dire", 
+          "risposte": [
+            {"testo": "indagine, ricerca","giusta": true},
+            {"testo": "invenzione fantastica", "giusta": false},
+            {"testo": "avvenimento", "giusta": false},
+            {"testo": "fatto", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Quante sono le fonti storiche", 
+          "risposte": [
+            {"testo": "2","giusta": false},
+            {"testo": "3", "giusta": false},
+            {"testo": "4", "giusta": true},
+            {"testo": "5", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Quali sono le fonti storiche", 
+          "risposte": [
+            {"testo": "orali, scritte,visive, materiali","giusta": true},
+            {"testo": "orali, scritte, aereospaziali, inventate", "giusta": false},
+            {"testo": "visive, materiali, orali", "giusta": false},
+            {"testo": "orali, scritte,visive, megalitiche", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Un' ascia è una fonte", 
+          "risposte": [
+            {"testo": "orale","giusta": false},
+            {"testo": "visiva", "giusta": false},
+            {"testo": "materiale", "giusta": true},
+            {"testo": "scritta", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Un dipinto è una fonte", 
+          "risposte": [
+            {"testo": "visiva","giusta": true},
+            {"testo": "orale", "giusta": false},
+            {"testo": "materiale", "giusta": false},
+            {"testo": "scritta", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Come si chiama la linea dove lo storico registra i fatti?", 
+          "risposte": [
+            {"testo": "del tempo","giusta": true},
+            {"testo": "dello spazio", "giusta": false},
+            {"testo": "della durata", "giusta": false},
+            {"testo": "della storia", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Lo storico ordina gli eventi in modo", 
+          "risposte": [
+            {"testo": "cronologico","giusta": true},
+            {"testo": "cronostorico", "giusta": false},
+            {"testo": "cronico", "giusta": false},
+            {"testo": "giornalistico", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cosa vuol dire che gli eventi sono messi in ordine cronologico", 
+          "risposte": [
+            {"testo": "dal più lontano al più recente","giusta": true},
+            {"testo": "dal più recente al più lontano", "giusta": false},
+            {"testo": "sono in ordine casuale", "giusta": false},
+            {"testo": "in ordine alfabetico", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cosa studia il geologo?", 
+          "risposte": [
+            {"testo": "Rocce e terreno","giusta": true},
+            {"testo": "Resti fossili", "giusta": false},
+            {"testo": "Resti dei primi uomini", "giusta": false},
+            {"testo": "Oggetti del passato", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cosa studia il paleoantropologo?", 
+          "risposte": [
+            {"testo": "Resti dei primi uomini","giusta": true},
+            {"testo": "La biografia di Indiana Jones", "giusta": false},
+            {"testo": "I fossili", "giusta": false},
+            {"testo": "Rocce e terreno", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cosa sono i fossili?", 
+          "risposte": [
+            {"testo": "Resti di animali e piante ora diventati pietra","giusta": true},
+            {"testo": "Persone molto vecchie", "giusta": false},
+            {"testo": "Piante antiche", "giusta": false},
+            {"testo": "Armi per le astronavi", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "A cosa servono i fossili?", 
+          "risposte": [
+            {"testo": "A capire l' aspetto di animali e piante milioni di anni fa","giusta": true},
+            {"testo": "A niente", "giusta": false},
+            {"testo": "A capire cosa mangiavano gli uomini primitivi", "giusta": false},
+            {"testo": "A studiare la geometria", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Come si forma un fossile?", 
+          "risposte": [
+            {"testo": "L' animale muore, terra e sabbia lo ricoprono, le parti dure si pietrificano","giusta": true},
+            {"testo": "Le parti dure dell' animale si pietrificano e l' animale muore", "giusta": false},
+            {"testo": "Terra e sabbia ricoprono l' animale, così questo muore e diventa fossile", "giusta": false},
+            {"testo": "L' animale si decompone e poi diventa fossile", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Nel fossile le parti molli", 
+          "risposte": [
+            {"testo": "si decompongono","giusta": true},
+            {"testo": "si pietrificano", "giusta": false},
+            {"testo": "lasciano una traccia, tipo disegno", "giusta": false},
+            {"testo": "coprono l' animale", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cos' è il sito archeologico?", 
+          "risposte": [
+            {"testo": "La casa dell' archeologo","giusta": false},
+            {"testo": "Un luogo famoso", "giusta": false},
+            {"testo": "Un luogo in cui si cercano reperti antichi", "giusta": true},
+            {"testo": "Un luogo in cui si cercano solo monete", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Quale oggetto può essere utile in un sito archeologico?", 
+          "risposte": [
+            {"testo": "Metal detector","giusta": true},
+            {"testo": "Pistola", "giusta": false},
+            {"testo": "Nintendo", "giusta": false},
+            {"testo": "Diario di una schiappa", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Cos' è il metodo stratigrafico?", 
+          "risposte": [
+            {"testo": "si scava il terreno strato dopo strato","giusta": true},
+            {"testo": "mentre si scava il terreno si fanno dei disegni", "giusta": false},
+            {"testo": "si fa una foto al terreno e si contano gli strati", "giusta": false},
+            {"testo": "si ricostruiscono con le mappe gli strati del terreno", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Se un oggetto si trova in uno strato di terreno molto più profondo della superficie", 
+          "risposte": [
+            {"testo": "E' antico","giusta": true},
+            {"testo": "E' recente", "giusta": false},
+            {"testo": "E' della nostra epoca", "giusta": false},
+            {"testo": "Qualche buontempone lo ha seppellito", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "La storia della Terra è stata divisa in", 
+          "risposte": [
+            {"testo": "ere geologiche","giusta": true},
+            {"testo": "ere geografiche", "giusta": false},
+            {"testo": "ere storiche", "giusta": false},
+            {"testo": "ere archeologiche", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Quante sono le ere geologiche?", 
+          "risposte": [
+            {"testo": "5","giusta": true},
+            {"testo": "6", "giusta": false},
+            {"testo": "4", "giusta": false},
+            {"testo": "3", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Nell' era arcaica", 
+          "risposte": [
+            {"testo": "Si formarono le montagne","giusta": true},
+            {"testo": "Comparvero i dinosauri", "giusta": false},
+            {"testo": "Si svilupparono i pesci", "giusta": false},
+            {"testo": "Nacque mia nonna", "giusta": false}
+          ]
+        },{ 
+          "testo": "Nell' era primaria", 
+          "risposte": [
+            {"testo": "Si svilupparono anfibi e rettili","giusta": true},
+            {"testo": "Scomparvero i dinosauri", "giusta": false},
+            {"testo": "Comparvero gli ominidi", "giusta": false},
+            {"testo": "Comparvero i dinosauri", "giusta": false}
+          ]
+        },{ 
+          "testo": "Nell' era quaternaria", 
+          "risposte": [
+            {"testo": "Nacque mia nonna","giusta": true},
+            {"testo": "Comparvero i dinosauri", "giusta": false},
+            {"testo": "Si svilupparono gli invertebrati", "giusta": false},
+            {"testo": "Comparvero i batteri", "giusta": false}
+          ]
+        },{ 
+          "testo": "Nell' acqua dei mari comparvero le prime forme di vita", 
+          "risposte": [
+            {"testo": "3 miliardi e 500 milioni di anni fa","giusta": true},
+            {"testo": "4 miliardi di anni fa", "giusta": false},
+            {"testo": "4 miliardi e 500 milioni di anni fa", "giusta": false},
+            {"testo": "3 miliardi di anni fa", "giusta": false}
+          ]
+        },{ 
+          "testo": "Le prime forme di vita erano", 
+          "risposte": [
+            {"testo": "organismi unicellulari","giusta": true},
+            {"testo": "organismi pluricellulari", "giusta": false},
+            {"testo": "alghe complesse", "giusta": false},
+            {"testo": "piante", "giusta": false}
+          ]
+        },{ 
+          "testo": "Le alghe complesse arricchirono l' acqua e l' aria di", 
+          "risposte": [
+            {"testo": "ossigeno","giusta": true},
+            {"testo": "azoto", "giusta": false},
+            {"testo": "elio", "giusta": false},
+            {"testo": "anidride carbonica", "giusta": false}
+          ]
+        },{ 
+          "testo": "Quando comparvero i primi invertebrati?", 
+          "risposte": [
+            {"testo": "600 milioni di anni fa","giusta": true},
+            {"testo": "500 milioni di anni fa", "giusta": false},
+            {"testo": "1 miliardo di anni fa", "giusta": false},
+            {"testo": "2000 anni fa", "giusta": false}
+          ]
+        },{ 
+          "testo": "Cosa vuol dire invertebrati?", 
+          "risposte": [
+            {"testo": "animali senza scheletro","giusta": true},
+            {"testo": "animali con corazza", "giusta": false},
+            {"testo": "animali senza fibra morale", "giusta": false},
+            {"testo": "animali acquatici", "giusta": false}
+          ]
+        },{ 
+          "testo": "Cos' è l' evoluzione?", 
+          "risposte": [
+            {"testo": "processo per adattarsi meglio all' ambiente","giusta": true},
+            {"testo": "la trasformazione di un pokemon", "giusta": false},
+            {"testo": "imparare a respirare l' ossigeno", "giusta": false},
+            {"testo": "processo di cambiamento", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Alcuni pesci diventarono anfibi grazie a cosa?", 
+          "risposte": [
+            {"testo": "ossigeno","giusta": true},
+            {"testo": "acqua", "giusta": false},
+            {"testo": "terra", "giusta": false},
+            {"testo": "trilobiti", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "I dinosauri comparvero nell' era secondaria", 
+          "risposte": [
+            {"testo": "230 milioni di anni fa","giusta": true},
+            {"testo": "330 milioni di anni fa", "giusta": false},
+            {"testo": "300 milioni di anni fa", "giusta": false},
+            {"testo": "3 miliardi di anni fa", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Quante specie di dinosauri hanno individuato i paleontologi", 
+          "risposte": [
+            {"testo": "circa 700","giusta": true},
+            {"testo": "esattamente 600", "giusta": false},
+            {"testo": "circa 800", "giusta": false},
+            {"testo": "1000", "giusta": false}
+          ]
+        },
+        { 
+          "testo": "Come nascevano i piccolo dinosauri?", 
+          "risposte": [
+            {"testo": "Le femmine deponevano le uova","giusta": true},
+            {"testo": "I maschi deponevano le uova", "giusta": false},
+            {"testo": "Venivano partoriti, perché i dinosauri erano mammiferi", "giusta": false},
+            {"testo": "Non lo sappiamo", "giusta": false}
+          ]
+        },{ 
+          "testo": "Il triceratopo era", 
+          "risposte": [
+            {"testo": "Erbivoro, di circa 9 metri e con tre corna sulla testa","giusta": true},
+            {"testo": "Carnivoro, di circa 9 metri e con tre corna sulla testa", "giusta": false},
+            {"testo": "Erbivoro, di circa 9 metri, con un corno sulla testa", "giusta": false},
+            {"testo": "Carnivoro e senza corna", "giusta": false}
+          ]
+        }
+    ]   
+}
