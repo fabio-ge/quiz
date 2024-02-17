@@ -6,23 +6,22 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-risultati',
   templateUrl: './risultati.component.html',
-  styleUrls: ['./risultati.component.css']
+  styleUrls: ['./risultati.component.css'],
 })
-export class RisultatiComponent implements OnInit{
+export class RisultatiComponent implements OnInit {
   risultati!: Risultato[];
   punteggio!: number;
   numeroDomande = this.quizService.NUMERO_DOMANDE;
 
-  constructor(private quizService: QuizService,
-              private router: Router){}
+  constructor(private quizService: QuizService, private router: Router) {}
 
   ngOnInit(): void {
-      this.risultati = this.quizService.getRiepilogo();
-      this.punteggio = this.quizService.getPunteggioFinale();
+    this.risultati = this.quizService.getRiepilogo();
+    this.punteggio = this.quizService.getPunteggioFinale();
   }
 
-  nuovaPartita(){
-    this.router.navigateByUrl("/");
+  nuovaPartita() {
+    this.quizService.resetRiepilogo();
+    this.router.navigateByUrl('/');
   }
-
 }
